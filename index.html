@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Age Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <section class="inputs">
+        <form class="thisForm">
+            <div class="first">
+                <label for="day-input">day</label>
+                <input type="number" name="date-day" placeholder="DD" title="DAY" id="day-input" class="number" max="31" min="1">
+            </div>
+                <div class="second">
+                <label for="month-input">month</label>
+            <input type="number" name="date-month" placeholder="MM" id="month-input" class="number">
+            </div>
+            <div class="third">
+                <label for="year-input">year</label>
+                <input type="number" name="date-year" placeholder="YYYY" id="year-input" class="number">
+            </div>
+            <input type="submit" class="sumbitButton">
+        </form>
+    </section>
+
+    <hr>
+
+        <p class="result"><span class="result-year purple">- -</span>years</p>
+        <p class="result"><span class="result-month purple">- -</span>months</p>
+        <p class="result"><span class="result-day purple">- -</span>days</p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

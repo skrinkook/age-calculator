@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f3f3f3;
+}
+
+.container {
+    background-color: white;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 20px 20px 140px 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+p>span.purple {
+    color: rgb(134, 85, 251);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 5rem;
+    margin-right: 2rem;
+}
+
+p.result {
+    font-weight: bolder;
+    font-size: 5rem;
+    font-style: italic;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 30%;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.thisForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+}
+
+input.number {
+    width: 5rem;
+    height: 3.5rem;
+}
+
+.sumbitButton {
+    position: absolute;
+    margin-top: 3.9rem;
+    
+
+}
