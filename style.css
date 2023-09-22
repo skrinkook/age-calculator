@@ -1,3 +1,10 @@
+@font-face {font-family: 'Poppins-Bold'; src: url('fonts/Poppins-Bold.ttf') format('truetype');}
+@font-face {font-family: 'Poppins-BoldItalic'; src: url('fonts/Poppins-BoldItalic.ttf') format('truetype');}
+@font-face {font-family: 'Poppins-ExtraBold'; src: url('fonts/Poppins-ExtraBold.ttf') format('truetype');}
+@font-face {font-family: 'Poppins-ExtraBoldItalic'; src: url('fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');}
+@font-face {font-family: 'Poppins-Italic'; src: url('fonts/Poppins-Italic.ttf') format('truetype');}
+@font-face {font-family: 'Poppins-Regular'; src: url('fonts/Poppins-Regular.ttf') format('truetype');}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +12,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Poppins-ExtraBoldItalic, sans-serif;
     background-color: #f3f3f3;
 }
 
@@ -23,17 +30,19 @@ body {
 }
 
 p>span.purple {
-    color: rgb(134, 85, 251);
-    font-weight: bold;
+    font-family: Poppins-ExtraBold;
     font-style: italic;
+    color: hsl(259, 100%, 65%);
     font-size: 5rem;
     margin-right: 2rem;
 }
 
 p.result {
-    font-weight: bolder;
-    font-size: 5rem;
-    font-style: italic;
+    /* font-weight: bolder; */
+    font-size: 4.5rem;
+    /* font-style: italic; */
+    /* outline: 1px solid green; */
+    margin-bottom: -40px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -44,18 +53,24 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 label {
     letter-spacing: 2px;
     text-transform: uppercase;
-    opacity: 30%;
-    font-weight: bold;
-    font-size: 0.8rem;
+    color: hsl(0, 0%, 0%, 0.45);
+    font-family: Poppins-Bold;
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
 }
 
 .thisForm {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 25%;
 
 }
 
@@ -75,13 +90,53 @@ label {
 }
 
 input.number {
-    width: 5rem;
-    height: 3.5rem;
+    font-family: Poppins-Bold;
+    font-size: 1.55em;
+    padding-left: 10px;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 6px;
+    border: 1px solid hsl(0, 0%, 0%, 0.25);
+    /* margin-bottom: 35px; */
 }
 
-.sumbitButton {
+input.number:focus {
+    border-color: green;
+}
+
+
+hr {
+    /* position: inherit; */
+    opacity: 40%;
+}
+.submitButton {
     position: absolute;
-    margin-top: 3.9rem;
-    
-
+    top: 23.7%;
+    left: 81%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 60px;
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    text-indent: -9999px;
+    z-index: 9999;
+    background-image: url("images/icon-arrow.svg");
+    background-size: contain 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
+
+.submitButton:hover,
+.submitButton:focus {
+    background-color: black;
+}
+
+label.errorState {
+    font-family: Poppins-Italic;
+    color:hsl(0, 100%, 67%);
+    text-transform: none;
+    text-indent: -9999px;
+    margin-bottom: 18px;
+}
+
