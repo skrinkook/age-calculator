@@ -100,9 +100,9 @@ input.number {
     /* margin-bottom: 35px; */
 }
 
-input.number:focus {
+/* input.number:focus {
     border-color: green;
-}
+} */
 
 
 hr {
@@ -132,11 +132,27 @@ hr {
     background-color: black;
 }
 
-label.errorState {
+label.down {
     font-family: Poppins-Italic;
     color:hsl(0, 100%, 67%);
     text-transform: none;
     text-indent: -9999px;
     margin-bottom: 18px;
+    font-size: 0.7rem;
+    letter-spacing: normal;
 }
+
+#youAreDead {
+    margin-top: 40px;
+    color: rgba(255, 0, 0, 0.7);
+}
+
+
+/* label.errorState.upper {
+    color:hsl(0, 100%, 67%);
+}
+
+input.errorState {
+    border-color: hsl(0, 100%, 67%);
+} */
 
