@@ -10,19 +10,19 @@
     <section class="inputs">
         <form class="thisForm">
             <div class="first">
-                <label for="day-input">day</label>
-                <input type="number" name="date-day" placeholder="DD" title="DAY" id="day-input" class="number" max="31" min="1">
-                <label for="day-input" class="errorState">Error State 1</label>
+                <label for="day-input" class="upper" id="upper-label1">day</label>
+                <input type="number" name="dateDay" placeholder="DD" title="DAY" id="day-input" class="number" max="31" min="1">
+                <label for="day-input" class="down" id="down-label1">Error State 1</label>
             </div>
                 <div class="second">
-                <label for="month-input">month</label>
-            <input type="number" name="date-month" placeholder="MM" id="month-input" class="number" min="1" max="12">
-                <label for="day-input" class="errorState">Error State 2</label>
+                <label for="month-input" class="upper" id="upper-label2">month</label>
+            <input type="number" name="dateMonth" placeholder="MM" id="month-input" class="number" min="1" max="12">
+                <label for="month-input" class="down" id="down-label2">Error State 2</label>
             </div>
             <div class="third">
-                <label for="year-input">year</label>
-                <input type="number" name="date-year" placeholder="YYYY" id="year-input" class="number">
-                <label for="day-input" class="errorState">Error State 3</label>
+                <label for="year-input" class="upper" id="upper-label3">year</label>
+                <input type="number" name="dateYear" placeholder="YYYY" id="year-input" class="number">
+                <label for="year-input" class="down" id="down-label3">Error State 3</label>
             </div>
             <input type="submit" class="submitButton">
         </form>
@@ -34,8 +34,10 @@
         <p class="result"><span class="result-month purple">- -</span>months</p>
         <p class="result"><span class="result-day purple">- -</span>days</p>
 
+        <p id="youAreDead"></p>
     </div>
 
+    <script src="functions.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
