@@ -20,3 +20,11 @@ Also code makes sure that date is not in the future. If that's the case it will 
 **Same goes if you enter more days than there are in a month you choosed.**
 
 ![obrázok](https://github.com/skrinkook/age-calculator/assets/23417443/ff979f7d-d6f5-4adf-83f1-0911c2f26552)
+
+**You can easily customize what should happen to a site when specific date are being entered. Just change year in the code below... just make sure you have both 2001-12-3 and 2001-12-03 variants, because without it on mobile devices it might not work.**
+```
+    if (inputDate.getTime() === new Date("2001-12-3").getTime() || inputDate.getTime() === new Date("2001-12-03").getTime()) {
+      //What should happen
+    }
+```
+
