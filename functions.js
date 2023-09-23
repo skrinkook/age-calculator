@@ -38,3 +38,24 @@ function isDateValid(day, month, year) {
       return false; // Invalid date
     }
   }
+
+const animateNumbers = function(id, intervalValue, endNumberValue){
+    let valueDisplays = document.querySelectorAll(id);
+    let interval = intervalValue;
+    valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = endNumberValue;
+    if(endNumberValue === 0){ 
+      valueDisplay.textContent = startValue;
+      return; 
+  }
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function () {
+    startValue += 1;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+  });
+}
