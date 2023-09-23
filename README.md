@@ -13,8 +13,8 @@ Also code makes sure that date is not in the future. If that's the case it will 
 
 ![obrázok](https://github.com/skrinkook/age-calculator/assets/23417443/034eed9b-5678-4e49-95d4-591032ac6c57)
 
-    - It can detect leap days, for example 29/2/2020 is okay.... but if u enter 29/2/2023 it will highlight day 29 as a invalid number because this is not a leap day.
-    - Same goes if you enter more days than there are in a month you choosed.
+   - It can detect leap days, for example 29/2/2020 is okay.... but if u enter 29/2/2023 it will highlight day 29 as a invalid number because this is not a leap day.
+   - Same goes if you enter more days than there are in a month you choosed.
 
 You can easily customize what should happen to a site when specific date are being entered. Just change year in the code below... just make sure you have both 2001-12-3 and 2001-12-03 variants, because without it on mobile devices it might not work.
 ```
