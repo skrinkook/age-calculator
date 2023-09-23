@@ -14,6 +14,9 @@
 body {
     font-family: Poppins-ExtraBoldItalic, sans-serif;
     background-color: #f3f3f3;
+    background-repeat: repeat;
+    background-size: 100vw;
+
 }
 
 .container {
@@ -100,11 +103,6 @@ input.number {
     /* margin-bottom: 35px; */
 }
 
-/* input.number:focus {
-    border-color: green;
-} */
-
-
 hr {
     /* position: inherit; */
     opacity: 40%;
@@ -147,12 +145,62 @@ label.down {
     color: rgba(255, 0, 0, 0.7);
 }
 
+@media only screen and (max-aspect-ratio: 649/1000){
 
-/* label.errorState.upper {
-    color:hsl(0, 100%, 67%);
+    .container {
+        width: 95vw;
+        height: 70vh;
+        border-radius: 5% 5% 25% 5%;
+        box-shadow: none;
+    }
+
+    .thisForm {
+        padding-right: 0%;
+    }
+
+    input.number {
+        width: 26vw;
+        height: 7.5vh;
+        border-radius: 20px;
+        font-size: 5.5vw;
+        padding-left: 15%;
+        border: 0.3vw solid hsl(0, 0%, 0%, 0.15);
+    }
+
+    label {
+        font-size: 3.5vw;
+    }
+
+    label.down {
+        font-size: 2.5vw;
+    }
+
+    hr {
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+    }
+
+    p.result {
+        font-size: 13vw;
+        margin-bottom: 0;
+    }
+
+    p>span.purple {
+        font-size: 13vw;
+    }
+
+    .submitButton {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 18.75vh;
+        width: 20vw;
+        height: 20vw;
+        background-size: 50%;
+        border-radius: 20vw;
+
+    }
+
+    #youAreDead {
+        font-size: 5vw;
+    }
 }
-
-input.errorState {
-    border-color: hsl(0, 100%, 67%);
-} */
-
