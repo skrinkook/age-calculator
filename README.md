@@ -1,6 +1,6 @@
 # age-calculator
 
-# This app will take 3 inputs (day, month, year) and calculate how much time has passed since then.
+**This app will take 3 inputs (day, month, year) and calculate how much time has passed since then.**
 ![obrázok](https://github.com/skrinkook/age-calculator/assets/23417443/765de0b6-4050-491f-8b5f-69964c00ae5e)
 Every input is checked if it was not left empty, if so it will be highlighted.
 There is set max. and min. value for days and months in html, so user cannot submit number like 15. month or 40. day.
