@@ -22,4 +22,11 @@ You can easily customize what should happen to a site when specific date are bei
       //What should happen
     }
 ```
+**Mobile**
+
+![obrázok](https://github.com/skrinkook/age-calculator/assets/23417443/e394ea06-94d9-4567-b016-194b6fa6686d)
+
+
+
+
 
