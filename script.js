@@ -20,6 +20,7 @@ const spanDays = document.querySelector(".result-day")
 const requiredError = "This field is required";
 const easterEgg = document.querySelector("#youAreDead");
 
+
 const clearErrorState = function(){
     inputBoxs.forEach(inputbox => {
         inputbox.style.borderColor = 'hsl(0, 0%, 0%, 0.25)';
@@ -35,6 +36,7 @@ const clearErrorState = function(){
     spanMonths.textContent = `- -`;
     spanDays.textContent = `- -`;
 }
+
  
 document.querySelector(".thisForm").addEventListener("submit", function(e){
     e.preventDefault();
@@ -62,10 +64,26 @@ document.querySelector(".thisForm").addEventListener("submit", function(e){
     const inputDate = new Date(`${Input3}-${Input2}-${Input1}`);
     const currentDate = new Date();
     // Compare the input date with the current date
-    if (inputDate > currentDate) {
 
-        return; 
-    } 
+    if (inputDate > currentDate) {
+        if (parseInt(Input3, 10) > currentDate.getFullYear()) {
+            downLabel3.textContent = 'Must be in the past';
+            downLabel3.style.textIndent = '0px';
+            inputBox3.style.borderColor = 'hsl(0, 100%, 67%)';
+            upperLabel3.style.color = 'hsl(0, 100%, 67%)';
+        } else if (parseInt(Input3, 10) === currentDate.getFullYear() && parseInt(Input2, 10) > currentDate.getMonth() + 1) {
+            downLabel2.textContent = 'Must be in the past';
+            downLabel2.style.textIndent = '0px';
+            inputBox2.style.borderColor = 'hsl(0, 100%, 67%)';
+            upperLabel2.style.color = 'hsl(0, 100%, 67%)';
+        } else if (parseInt(Input3, 10) === currentDate.getFullYear() && parseInt(Input2, 10) === currentDate.getMonth() + 1 && parseInt(Input1, 10) > currentDate.getDate()) {
+            downLabel1.textContent = 'Must be in the past';
+            downLabel1.style.textIndent = '0px';
+            inputBox1.style.borderColor = 'hsl(0, 100%, 67%)';
+            upperLabel1.style.color = 'hsl(0, 100%, 67%)';
+        }
+        return;
+    }
 
     if (inputDate < new Date("1900-01-01")){
         easterEgg.textContent = "You are dead lol... 💀";
@@ -85,12 +103,14 @@ document.querySelector(".thisForm").addEventListener("submit", function(e){
     }
 
     console.log("pokračuje to")
-    spanYears.textContent = `${difference.years}`;
-    spanMonths.textContent = `${difference.months}`;
-    spanDays.textContent = `${difference.days}`;
+    // spanYears.textContent = `${difference.years}`;
+    // spanMonths.textContent = `${difference.months}`;
+    // spanDays.textContent = `${difference.days}`;
 
-    // console.log(`${yearDiff} years, ${monthDiff} months, ${dayDiff} days`);
+    animateNumbers(".result-year", 1000, difference.years);
+    animateNumbers(".result-month", 1000, difference.months);
+    animateNumbers(".result-day", 1000, difference.days);
+    
 
     console.log(`Years: ${difference.years}, Months: ${difference.months}, Days: ${difference.days}`);
 })
-
